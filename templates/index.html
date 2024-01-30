@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CloudWatch Monitor</title>
-</head>
-<body>
-    <h1>CloudWatch Monitor</h1>
-    <form method="post" action="/">
-        <label for="aws_access_key">AWS Access Key:</label>
-        <input type="text" name="aws_access_key" required><br>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- <h1>CloudWatch Monitor</h1> default name -->
+    <div class="container">
+        <div class="text">
+            FLEXSENSE-AI PREDICT
+         </div>
+      <form method="post" action="/">
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" name="aws_access_key" required /><br />
+            <div class="underline"></div>
+            <label for="aws_access_key">AWS Access Key:</label>
+          </div>
+          <div class="input-data">
+            <input type="text" name="aws_secret_key" required /><br />
+            <div class="underline"></div>
+            <label for="aws_secret_key">AWS Secret Key:</label>
+          </div>
+        </div>
 
-        <label for="aws_secret_key">AWS Secret Key:</label>
-        <input type="text" name="aws_secret_key" required><br>
+        <!-- div 2 -->
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" name="aws_region" required /><br />
+            <div class="underline"></div>
+            <label for="aws_region">AWS Region:</label>
+          </div>
+          <div class="input-data">
+            <input type="text" name="dimension_value" required /><br />
+            <div class="underline"></div>
+            <label for="dimension_value">Dimension Value:</label>
+          </div>
+        </div>
 
-        <label for="aws_region">AWS Region:</label>
-        <input type="text" name="aws_region" required><br>
+        <!-- div 3 -->
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" name="metric_name" required /><br />
+            <div class="underline"></div>
+            <label for="metric_name">Metric Name:</label>
+          </div>
 
-        <label for="dimension_value">Dimension Value:</label>
-        <input type="text" name="dimension_value" required><br>
+          <div class="input-data">
+            <input type="text" name="threshold_value" required /><br />
+            <div class="underline"></div>
+            <label for="threshold_value">Threshold Value:</label>
+          </div>
+        </div>
 
-        <label for="metric_name">Metric Name:</label>
-        <input type="text" name="metric_name" required><br>
+        <!-- <input type="submit" value="Submit" /> default -->
+        <div class="form-row submit-btn">
+          <div class="input-data">
+            <div class="inner"></div>
+            <input type="submit" value="submit" />
+          </div>
+        </div>
+      </form>
 
-        <label for="threshold_value">Threshold Value:</label>
-        <input type="text" name="threshold_value" required><br>
-
-        <input type="submit" value="Submit">
-    </form>
-</body>
+      <!-- endpoint of main div -->
+    </div>
+  </body>
 </html>

@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Result</title>
-</head>
-<body>
-    <h1>Result</h1>
-    <p>{{ breach_message }}</p>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <div class="text">
+            FLEXSENSE-AI PREDICT
+         </div>
+      <p>{{ breach_message }}</p>
 
-    <h2>Actual and Predicted Values</h2>
-    {{ actual_and_predicted_values | safe }}
+      <h2>Actual and Predicted Values</h2>
+      {{ actual_and_predicted_values | safe }}
 
-    <h2>Actual vs Predicted Plot</h2>
-    <img src="{{ plot_path }}" alt="Actual vs Predicted Plot">
+      <h2>Actual vs Predicted Plot</h2>
+      <img src="{{ plot_path }}" alt="Actual vs Predicted Plot" />
 
-    <p><a href="/">Go back to input form</a></p>
-</body>
+      <p><a href="/">Go back to input form</a></p>
+    </div>
+  </body>
 </html>
