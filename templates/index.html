@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudWatch Monitor</title>
+</head>
+<body>
+    <h1>CloudWatch Monitor</h1>
+    <form method="post" action="/">
+        <label for="aws_access_key">AWS Access Key:</label>
+        <input type="text" name="aws_access_key" required><br>
+
+        <label for="aws_secret_key">AWS Secret Key:</label>
+        <input type="text" name="aws_secret_key" required><br>
+
+        <label for="aws_region">AWS Region:</label>
+        <input type="text" name="aws_region" required><br>
+
+        <label for="dimension_value">Dimension Value:</label>
+        <input type="text" name="dimension_value" required><br>
+
+        <label for="metric_name">Metric Name:</label>
+        <input type="text" name="metric_name" required><br>
+
+        <label for="threshold_value">Threshold Value:</label>
+        <input type="text" name="threshold_value" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
